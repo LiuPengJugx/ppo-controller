@@ -1,0 +1,9 @@
+*sr_customer_sk     *sr_store_sk        sr_return_amt  sr_returned_date_sk 
+sr_return_quantity *sr_customer_sk *sr_ticket_number *sr_returned_date_sk *sr_item_sk 
+sr_net_loss *sr_customer_sk  *sr_item_sk  *sr_ticket_number *sr_returned_date_sk  
+sr_return_quantity *sr_customer_sk *sr_item_sk *sr_ticket_number *sr_returned_date_sk
+sr_return_quantity sr_return_amt *sr_ticket_number  *sr_item_sk *sr_return_amt 
+sr_store_sk sr_returned_date_sk sr_return_amt sr_net_loss
+sr_return_amt sr_net_loss *sr_returned_date_sk  *sr_store_sk
+sr_return_quantity *sr_item_sk *sr_returned_date_sk
+sr_return_quantity *sr_item_sk *sr_ticket_number *sr_reason_sk

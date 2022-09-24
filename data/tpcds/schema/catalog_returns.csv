@@ -1,0 +1,5 @@
+cr_catalog_page_sk cr_returned_date_sk cr_return_amount cr_net_loss
+cr_call_center_sk cr_return_amount cr_net_loss *cr_returned_date_sk
+cr_returning_customer_sk cr_return_amt_inc_tax cr_returned_date_sk *cr_returning_addr_sk *cr_returning_addr_sk
+cr_return_quantity *cr_item_sk *cr_returned_date_sk
+cr_net_loss *cr_call_center_sk *cr_returned_date_sk *cr_returning_customer_sk

@@ -1,0 +1,71 @@
+*ss_customer_sk *ss_sold_date_sk
+ss_ext_list_price ss_ext_discount_amt *ss_customer_sk  *ss_sold_date_sk 
+ss_quantity ss_ext_sales_price ss_ext_wholesale_cost *ss_store_sk  *ss_sold_date_sk *ss_hdemo_sk *ss_cdemo_sk  *ss_addr_sk *ss_net_profit
+*ss_item_sk *ss_sold_date_sk  
+ss_quantity  ss_list_price *ss_sold_date_sk 
+ss_quantity *ss_list_price *ss_item_sk *ss_sold_date_sk *ss_quantity  
+*ss_item_sk *ss_sold_date_sk
+ss_quantity   ss_list_price *ss_sold_date_sk
+ss_quantity ss_list_price *ss_item_sk *ss_sold_date_sk 
+*ss_quantity *ss_list_price *ss_item_sk *ss_sold_date_sk 
+ss_quantity *ss_customer_sk  *ss_item_sk *ss_ticket_number
+ss_ext_sales_price *ss_sold_date_sk *ss_item_sk  *ss_customer_sk  *ss_store_sk 
+*ss_sold_date_sk *ss_item_sk
+ss_quantity ss_sales_price *ss_customer_sk *ss_sold_date_sk
+*ss_quantity *ss_sales_price
+*ss_sold_date_sk *ss_item_sk
+ss_quantity ss_sales_price *ss_customer_sk *ss_sold_date_sk
+*ss_quantity *ss_sales_price *ss_customer_sk 
+*ss_item_sk *ss_customer_sk *ss_store_sk
+ss_net_profit *ss_sold_date_sk  *ss_item_sk *ss_customer_sk *ss_item_sk *ss_ticket_number 
+ss_quantity ss_list_price ss_coupon_amt ss_sales_price *ss_sold_date_sk *ss_item_sk  *ss_store_sk *ss_cdemo_sk
+*ss_list_price *ss_quantity *ss_coupon_amt *ss_wholesale_cost *ss_coupon_amt
+*ss_list_price *ss_quantity *ss_coupon_amt *ss_wholesale_cost *ss_coupon_amt
+*ss_list_price *ss_quantity *ss_coupon_amt *ss_wholesale_cost *ss_coupon_amt
+*ss_list_price *ss_quantity *ss_coupon_amt *ss_wholesale_cost *ss_coupon_amt
+*ss_list_price *ss_quantity *ss_coupon_amt *ss_wholesale_cost *ss_coupon_amt
+ss_quantity *ss_sold_date_sk *ss_item_sk *ss_store_sk *ss_customer_sk *ss_ticket_number 
+ss_ext_discount_amt *ss_sold_date_sk *ss_item_sk
+ss_ext_sales_price *ss_ext_sales_price *ss_addr_sk  
+ss_ext_sales_price *ss_item_sk  *ss_sold_date_sk  *ss_addr_sk
+ss_ticket_number ss_customer_sk *ss_customer_sk *ss_store_sk  *ss_hdemo_sk
+ *ss_customer_sk *ss_sold_date_sk 
+ss_net_profit ss_ext_sales_price *ss_sold_date_sk *ss_item_sk  *ss_store_sk 
+*ss_sold_date_sk *ss_customer_sk 
+ss_ext_list_price ss_ext_wholesale_cost ss_ext_discount_amt  ss_ext_sales_price *ss_customer_sk *ss_sold_date_sk
+ ss_ext_sales_price *ss_sold_date_sk *ss_item_sk  
+ss_sales_price *ss_sold_date_sk *ss_store_sk
+ss_item_sk *ss_net_profit *ss_store_sk  *ss_cdemo_sk
+ss_item_sk ss_net_profit *ss_store_sk  *ss_cdemo_sk
+ss_ticket_number ss_customer_sk ss_coupon_amt ss_net_profit *ss_sold_date_sk *ss_store_sk  *ss_hdemo_sk *ss_addr_sk
+ss_sales_price *ss_item_sk *ss_sold_date_sk *ss_store_sk 
+ss_quantity *ss_store_sk *ss_sold_date_sk *ss_cdemo_sk *ss_sales_price *ss_addr_sk *ss_net_profit
+*ss_item_sk ss_quantity ss_net_paid *ss_ticket_number *ss_ticket_number *ss_net_profit  *ss_net_paid  *ss_quantity *ss_sold_date_sk 
+ss_store_sk   ss_sold_date_sk  ss_ext_sales_price ss_net_profit
+*ss_ticket_number *ss_item_sk *ss_sold_date_sk  *ss_customer_sk *ss_store_sk 
+ss_item_sk ss_sales_price *ss_sold_date_sk 
+ss_ext_sales_price *ss_sold_date_sk  *ss_item_sk
+ss_sales_price *ss_item_sk  *ss_sold_date_sk  *ss_store_sk
+ss_ext_sales_price *ss_sold_date_sk  *ss_customer_sk   
+ss_ext_sales_price *ss_sold_date_sk *ss_item_sk 
+ss_sales_price ss_quantity *ss_sold_date_sk *ss_item_sk *ss_store_sk
+ss_ticket_number ss_customer_sk *ss_sold_date_sk *ss_store_sk *ss_hdemo_sk *ss_addr_sk
+*ss_customer_sk  *ss_sold_date_sk
+ss_quantity ss_list_price ss_coupon_amt ss_sales_price *ss_sold_date_sk  *ss_item_sk *ss_cdemo_sk *ss_promo_sk
+ss_ext_sales_price *ss_sold_date_sk    ss_item_sk   ss_sold_time_sk 
+ss_ticket_number ss_customer_sk *ss_sold_date_sk *ss_store_sk *ss_hdemo_sk
+ss_net_paid  *ss_sold_date_sk *ss_customer_sk
+ss_quantity ss_ext_sales_price *ss_sold_date_sk *ss_ticket_number *ss_item_sk 
+ss_ext_sales_price ss_net_profit *ss_sold_date_sk  *ss_store_sk
+ss_item_sk ss_customer_sk ss_quantity ss_wholesale_cost *ss_sales_price  *ss_sold_date_sk
+ss_ticket_number ss_customer_sk ss_coupon_amt ss_net_profit *ss_sold_date_sk  *ss_store_sk  *ss_hdemo_sk *ss_addr_sk
+ss_net_profit *ss_store_sk *ss_sold_date_sk
+*ss_sold_date_sk *ss_customer_sk
+ss_sold_time_sk ss_hdemo_sk ss_store_sk
+ss_sales_price *ss_item_sk *ss_sold_date_sk *ss_store_sk
+ss_net_profit *ss_quantity
+*ss_item_sk *ss_ticket_number ss_customer_sk ss_quantity  ss_sales_price
+*ss_sold_time_sk *ss_hdemo_sk  *ss_store_sk
+ss_customer_sk ss_item_sk  *ss_sold_date_sk
+ss_ext_sales_price *ss_item_sk *ss_sold_date_sk
+*ss_hdemo_sk ss_ext_sales_price *ss_sold_date_sk  *ss_item_sk
