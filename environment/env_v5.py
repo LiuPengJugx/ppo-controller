@@ -13,7 +13,7 @@ Environment class for PPO Controller
 class Env5(gym.Env):
     # hyper-parameters
     reward_threshold=0.1
-    cost_weight=[1,1]
+    cost_weight=[1,1] # weight coefficients  w_x and w_y
     def __init__(self,wLoad):
         self.w = wLoad
         self.model = Scvp
@@ -69,7 +69,6 @@ class Env5(gym.Env):
             temp_cur_par_schema=self.cur_par_schema.copy()
             if len(temp_cur_par_schema) == 1 and len(temp_cur_par_schema[0]) == self.w.attr_num:
                 temp_cur_par_schema=[[num] for num in range(self.w.attr_num)]
-            # new par需要加上之前未替换的分区
             for par in temp_cur_par_schema:
                 temp_par=par.copy()
                 for par_new in new_par_schema:
@@ -117,7 +116,6 @@ class Env5(gym.Env):
         front_cost = DiskIo.compute_cost(temp_workload, old_par_schema, self.w.attrs_length)
         after_cost = DiskIo.compute_cost(temp_workload, new_par_schema, self.w.attrs_length)
         io_cost = DiskIo.compute_cost(time_diff_workload, old_par_schema, self.w.attrs_length)
-        # 由于对未来负载情况未知，增加理想成本和操作成本的权重系数w1、w2
         w1, w2 = self.cost_weight[0], self.cost_weight[1]
         reward = ((front_cost - after_cost) * w1 - operation_cost * w2) / front_cost
         return reward, io_cost

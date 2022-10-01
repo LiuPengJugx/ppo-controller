@@ -48,7 +48,7 @@ def draw_estimated_query_cost():
             # plt.grid()
         plt.subplots_adjust(hspace=0.4, wspace=0.4)
         # plt.show()
-        plt.savefig(f'chart/estimate_query_cost.pdf', bbox_inches='tight')
+        plt.savefig(f'chart/estimate_query_cost2.pdf', bbox_inches='tight')
 
 
 
@@ -96,7 +96,7 @@ def draw_estimated_rep_cost():
                 plt.legend(methods,bbox_to_anchor=[3.3, 1], loc='lower center',frameon=False, ncol=len(methods))
         plt.subplots_adjust(hspace=0.4, wspace=0.4)
         # plt.show()
-        plt.savefig(f'chart/estimate_rep.pdf', bbox_inches='tight')
+        plt.savefig(f'chart/estimate_rep2.pdf', bbox_inches='tight')
 def draw_workload_size_scalability():
     cul_que_num=[682, 1424, 1443, 1504, 1583, 1661, 1699, 1779, 1862, 1936, 1979, 1985, 2009, 2035, 2092, 2115, 2155, 2209, 2225, 2323, 2370, 2385, 2427, 2466, 2498, 2506, 2517, 2522, 2560, 2600, 2691, 2739, 2823, 2889, 2930, 3013, 3040, 3067, 3079, 3085, 3122, 3138, 3152, 3236, 3272, 3333, 3377, 3492, 3602, 3636, 3686, 3708, 3757, 3763, 3771, 3809, 3810, 3874, 3965, 4041, 4135, 4196, 4225, 4276, 4307, 4346, 4382, 4394, 4399, 4422, 4496, 4543, 4635, 4693, 4807, 4854, 4903, 4960, 4980, 5023, 5053, 5083, 5101, 5119, 5133, 5200, 5221, 5250, 5353, 5403, 5496, 5530, 5560, 5619, 5675, 5699, 5708, 5715, 5738, 5767, 5834, 5895, 5938, 6043, 6095, 6137, 6175, 6189, 6224, 6294, 6300, 6320, 6331, 6335, 6387, 6450, 6522, 6600, 6660, 6714, 6746, 6842, 6864, 6920, 6964, 6980, 6992, 7051, 7116, 7199, 7261, 7354, 7431, 7537, 7601, 7619, 7620, 7651, 7716, 7762, 7842, 7993, 8054, 8164, 8193, 8194, 8224, 8232, 8248, 8281, 8318, 8359, 8435, 8512, 8652, 8713, 8750, 8868, 8870, 8888, 8894, 8908, 8909, 8910, 8951, 8985, 9067, 9123, 9192, 9319, 9393, 9482, 9532, 9536, 9548, 9558, 9575, 9618, 9658, 9729, 9771, 9855, 9945, 10058, 10115, 10139, 10181, 10198, 10210, 10257, 10283, 10316, 10408, 10496, 10557, 10607, 10648, 10679, 10754, 10769, 10784, 10792, 10804, 10821, 10829, 10870, 10900, 10959, 11038, 11106, 11199, 11251, 11329, 11389, 11414, 11438, 11474, 11479, 11492, 11504, 11505, 11521, 11562, 11614, 11686, 11714, 11855, 11927, 11997, 12028, 12072, 12098, 12107, 12122, 12133, 12143, 12208, 12240, 12289, 12396, 12457, 12507, 12624, 12660, 12707, 12731, 12770, 12784, 12798, 12845, 12862, 12967, 13069, 13122, 13164, 13183, 13315, 13384, 13394, 13420, 13430, 13454, 13500, 13551, 13631, 13666, 13743, 13833, 13869, 13928, 13939, 13977, 14005, 14016, 14018, 14033, 14054, 14061, 14149, 14220, 14285, 14333, 14447, 14485, 14544, 14596, 14615, 14620, 14636, 14673, 14687, 14689, 14726, 14791, 14847, 14868, 14970, 15035, 15096, 15120, 15165, 15213, 15250, 15260, 15276, 15286, 15336, 15435, 15514, 15536, 15600, 15678, 15763, 15801, 15841, 15846, 15852, 15867, 15872, 15897, 15913, 15974, 16055, 16096, 16188, 16246, 16329, 16375, 16434, 16439, 16465, 16478, 16490, 16508, 16535, 16597, 16694, 16743, 16868, 16891, 16998, 17027, 17053, 17067, 17111, 17145, 17149, 17156, 17221, 17248, 17314, 17367, 17472, 17597, 17690, 17705, 17737, 17753, 17768, 17787, 17835, 17891, 17970, 18093, 18149, 18176, 18243, 18314, 18328, 18352, 18443, 18487, 18568, 18663, 18752, 18788, 18816, 18896, 18908, 18946, 18966, 18985, 18996, 19020, 19042, 19064, 19119, 19182, 19269, 19331, 19421, 19479, 19505, 19575, 19593, 19612, 19624, 19711, 19728, 19788, 19814, 19903, 19987, 20105, 20153, 20192, 20202, 20216, 20223, 20237, 20298, 20327, 20374, 20460, 20552, 20649, 20714, 20763, 20806, 20842, 20860, 20870, 20895, 20957, 21012, 21096, 21176, 21279, 21332, 21369, 21393, 21404, 21413, 21421, 21436, 21454, 21461, 21466, 21505, 21577, 21596, 21705, 21814, 21858, 21892, 21954, 21962, 22007, 22013, 22014, 22047, 22067, 22079, 22095, 22178, 22230, 22309, 22354, 22472, 22492, 22535, 22592, 22616, 22632, 22642, 22695, 22752, 22822, 22864, 22994, 23106, 23256, 23295, 23297, 23305, 23328, 23339]
     data_original=[
@@ -355,7 +355,7 @@ def draw_selectivity_scalability():
 def draw_time_overhead():
     plt.figure(figsize=(10, 4))
     # 包括分区收益和重分区成本
-    chart_dict = read_csv('PG数据库实验.xlsx', 'sheet3')
+    chart_dict = read_csv('PG数据库实验.xlsx', 'sheet3-1')
     datasets = chart_dict['row_names']
     workload_names = ['Synthetic', 'TPC-H', 'TPC-DS']
     methods = chart_dict['column_names']
@@ -364,16 +364,22 @@ def draw_time_overhead():
 
     for i in range(10):
         plt.subplot(2,5,i+1)
+        sorted_data_row = sorted(data[i].copy())
         for cid,cell in enumerate(data[i]):
-            plt.bar(cid,cell, color=colors[cid],width=1)
+            rects=plt.bar(cid,cell,color=colors[cid],edgecolor='black',width=0.9,hatch='//')
+            rect=rects[0]
+            plt.annotate('{}'.format(sorted_data_row.index(cell)+1),
+                        xy=(rect.get_x() + rect.get_width() / 2, rect.get_height()),
+                        xytext=(0, 3),  # 3 points vertical offset
+                        textcoords="offset points",
+                        ha='center', va='bottom')
         if max(data[i])<100:
             if i==5:
                 plt.ylim(top=max(data[i])+2)
             elif i==6:
                 plt.ylim(top=max(data[i])+1.5)
             else: plt.ylim(top=max(data[i])+35)
-            # plt.text(labels[0], a[i] + 0.05, str(a[i]), ha='center', va='bottom')
-        # plt.xticks(ticks=[x for x in range(len(ref_datasets))], labels=methods, ha='left')
+        # plt.xticks(ticks=range(len(data[i])),labels=['%d' % (sorted_data_row.index(e)+1) for e in data[i]])
         plt.xlabel(datasets[i])
         plt.xticks(ticks=[x for x in range(len(methods))], labels=['' for _ in range(len(methods))])
         if i==0:
@@ -385,7 +391,7 @@ def draw_time_overhead():
 
     plt.subplots_adjust(hspace=0.3, wspace=0.4)
     # plt.show()
-    plt.savefig(f'chart/time_overhead.png', bbox_inches='tight')
+    plt.savefig(f'chart/time_overhead2.pdf', bbox_inches='tight')
 
 
 def accumulate_val(data,interval):
@@ -688,23 +694,38 @@ def draw_latency_throughput():
     for metric in ['rep']:
         if metric=='query':
             data = [pid_latency_list, ppo_latency_list, opt_latency_list]
-            labels = ["Feedback", "PPOController", "Optimal"]
+            labels = ["Feedback", "PPOController", "OPT"]
             colors = ['#007BFF', '#FF7F50', '#6C757D']
         else:
             data=[pid_rep_latency_list,ppo_rep_latency_list,opt_rep_latency_list]
-            labels = ["Feedback","PPOController","Optimal"]
+            labels = ["OPT","Feedback","PPOController"]
             colors = ['#007BFF', '#FF7F50', '#6C757D']
 
         plt.figure(figsize=(10, 4))
         for i in range(len(titles)):
             plt.subplot(2,5,i + 1)
-            for j in range(3):
-                plt.bar(j,data[j][i],color=colors[j],width=1)
-            # plt.bar([x for x in range(len(labels))],[pid_latency_list[i], ppo_latency_list[i],opt_latency_list[i]], color=['#007BFF', '#FF7F50', '#6C757D'], width=1)
-            # plt.text(labels[0], pid_latency_list[i] + 0.05, str(int(pid_latency_list[i])), ha='center', va='bottom')
-            # plt.text(labels[1], ppo_latency_list[i] + 0.05, str(int(ppo_latency_list[i])), ha='center', va='bottom')
-            # plt.text(labels[2], opt_latency_list[i] + 0.05, str(int(opt_latency_list[i])), ha='center', va='bottom')
-            # plt.title(f'{titles[i]}', fontdict={'fontsize': 8},loc=)
+            if metric=='query':
+                for j in range(3):
+                    rects=plt.bar(j, data[j][i], color=colors[j],width=1)
+                    # rects = plt.bar(j, data[j][i], color=colors[j], width=0.7, edgecolor='black', hatch='\\')
+                    # height = rects[0].get_height()
+                    # print('{:e}'.format(height))
+                    # plt.annotate('{}'.format('{:e}'.format(height)[:3]),
+                    #              xy=(rects[0].get_x() + rects[0].get_width() / 2, height),
+                    #              xytext=(0, 3),  # 3 points vertical offset
+                    #              textcoords="offset points",
+                    #              ha='center', va='bottom')
+            else:
+                for j_no,j in enumerate([2,0,1]):
+                    rects = plt.bar(j_no, data[j][i], color=colors[j],width=1)
+                    # rects=plt.bar(j_no,data[j][i],color=colors[j],width=0.7,edgecolor='black',hatch='\\')
+                    # height = rects[0].get_height()
+                    # plt.annotate('{}'.format(round(height,1)),
+                    #             xy=(rects[0].get_x() + rects[0].get_width() / 2, height),
+                    #             xytext=(0, 3),  # 3 points vertical offset
+                    #             textcoords="offset points",
+                    #             ha='center', va='bottom')
+            plt.xticks(ticks=[x for x in range(len(labels))], labels=['' for _ in range(len(labels))])
             plt.xlabel(titles[i])
             if metric=='query':
                 plt.ylim(min(pid_latency_list[i], ppo_latency_list[i],opt_latency_list[i])-500,max(pid_latency_list[i], ppo_latency_list[i]) + 500)
@@ -722,6 +743,9 @@ def draw_latency_throughput():
                     plt.ylim(top=ytop+5)
                 else:
                     plt.ylim(top=1.4 * ytop)
+            # else:
+            #     ytop = max([data[j][i] for j in range(3)])
+            #     plt.ylim(top=1.1 * ytop)
         plt.subplots_adjust(hspace=0.45, wspace=0.4)
         # plt.show()
         # plt.savefig('chart/query_latency.pdf',bbox_inches='tight')
@@ -766,15 +790,57 @@ def draw_latency_throughput():
     # # plt.show()
     # plt.savefig(f'chart/latency_per_time.pdf',bbox_inches='tight')
 
+def draw_workload_types():
+    fig = plt.figure(figsize=(10, 5))
+    # ax = fig.gca(projection='3d')
+    ax = fig.add_subplot(projection='3d')
+
+    # Plot scatterplot data (20 2D points per colour) on the x and z axes.
+    colors = ('r', 'g', 'k')
+    markers=('x','o','^')
+    workloads={
+        'TPC-H':[(0.6,0.7,0.2,'lineitem'),(-0.7,-0.4,0.5,'orders'),(-1,-0.4,1,'supplier')],
+        'TPC-DS':[(0.7,0.6,0.6,'catalog_sales'),(0.4,0.4,0.5,'store_sales'),(0.5,0.6,0.5,'web_sales')],
+        'Synthetic':[(-0.6,0.6,0.9,'SY1500'),(0.8,0.2,-0.7,'SY4000'),(1,1,-0.7,'SY1600'),(1,1,-0.6,'SY1200')]
+    }
+
+    for cid,env in enumerate(workloads.keys()):
+        for workload_dict in workloads[env]:
+            ax.scatter(workload_dict[0], workload_dict[1], workload_dict[2], c=colors[cid],marker=markers[cid])
+            ax.text(workload_dict[0], workload_dict[1], workload_dict[2],workload_dict[3])
+    # Make legend, set axes limits and labels
+    # ax.legend()
+   
+    ax.set(xlim=(-1, 1), ylim=(-1, 1), zlim=(-1, 1),
+       xlabel='Global Feature', ylabel='Local Feature', zlabel='Periodicity')
+    # ax.grid(False)
+    ax.set_xticks(np.linspace(-1,1,6))
+    ax.set_yticks(np.linspace(-1,1,6))
+    ax.set_zticks(np.linspace(-1,1,6))
+
+    # 设置三维图图形区域背景颜色（r,g,b,a）
+    ax.w_xaxis.set_pane_color((1.0, 1.0, 1.0, 1.0))
+    ax.w_yaxis.set_pane_color((1.0, 1.0, 1.0, 1.0))
+    ax.w_zaxis.set_pane_color((1.0, 1.0, 1.0, 1.0))
+
+    # ax.(range(-1,1,10))
+    # Customize the view angle so it's easier to see that the scatter points lie
+    # on the plane y=0
+    # ax.view_init(elev=20., azim=-35)
+    plt.tight_layout()
+    plt.show()
+    plt.savefig('workload_type_visualization.png', bbox_inches='tight')
+
 def main():
     # draw_estimated_query_cost()
     # draw_estimated_rep_cost()
     # draw_latency_throughput()
     # draw_rep_latency()
-    # draw_time_overhead()
-    draw_scalability()
+    draw_time_overhead()
+    # draw_scalability()
     # draw_selectivity_scalability()
     # draw_workload_size_scalability()
+    # draw_workload_types()
 
 if __name__=='__main__':
    main()

@@ -374,6 +374,20 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\data\data1\2800query-steam.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\experiment\result\metric_record.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
       </map>
     </option>
   </component>

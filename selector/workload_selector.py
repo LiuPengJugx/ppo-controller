@@ -112,7 +112,7 @@ def partition_by_wide_workload(workload,wLoad):
         query_of_cluster.append(len(cluster['queries']))
         new_par_schema += Scvp.partitioner2(affinity_matrix, cluster['queries'], wLoad.attrs_length)
     time1=time.time()
-    print(f"Back in time:{cur_time}--->{time_sequence[cnt]}, query count:{query_of_cluster}, time-consuming:{time1-time0}, partition scheme:{new_par_schema}")
+    print(f"Back in time:{cur_time}--->{time_sequence[cnt]}, query count:{sum(query_of_cluster)}, time-consuming:{time1-time0}, partition scheme:{new_par_schema}")
     return new_par_schema,time_sequence[cnt],time1-time0
 
 def partitioner_simulation(wLoad):
@@ -139,10 +139,3 @@ if __name__=='__main__':
         start_time=time.time()
         partitioner_simulation(wLoad)
         print(f"load:{query_num}, time:{time.time()-start_time}")
-        # state_matrix(wLoad)
-        # 计算分区方案
-        # load: 1600, time: 229.74662899971008
-        # load: 2600, time: 135.99035358428955
-        # 不计算分区方案
-        # load:1600, time:0.13658809661865234
-        # load:2600, time:0.22077059745788574

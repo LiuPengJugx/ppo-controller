@@ -34,7 +34,7 @@ Some modules required by the project can be seen in the requirement.txt file.  I
 #### DB Configuration (Non-required)
 
 When conducting experiments about latency, users need to configure the PG database environment in advance and modify the user connection information in _db\pg.py_. 
-All table structures can be imported through _db\x.sql_. Call _adapter_controller_pg.py_ to deploy partitions and get experimental results.
+All table structures can be imported through _db\ppoc.sql_. Call _adapter_controller_pg.py_ to deploy partitions and get experimental results.
 
 #### Run partitioning algorithms on HDD cost model:
 - **syn-main.py:** Test the performance of baselines over synthetic datasets
